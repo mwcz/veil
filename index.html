@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>veil playground</title>
+        <link rel="stylesheet" href="styles.css" type="text/css" media="screen" charset="utf-8">
+    </head>
+    <body>
+        <main role="main">
+        </main>
+
+        <div class="gradient-overlay"></div>
+
+        <script id="template" type="text/ractive">
+            <pre>
+            {{ #each intro:line }}
+{{{ intro[line] }}}
+            {{ /each }}
+            {{ #each lines:line }}
+{{{ lines[line] }}}
+            {{ /each }}
+            </pre>
+        </script>
+
+        <script src="bower_components/ractive/ractive.js"></script>
+        <script src="bower_components/lodash/dist/lodash.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
